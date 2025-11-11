@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -28,6 +29,7 @@ public class EmployeeController {
     }
 
     @PostMapping
+    @Transactional
     public ResponseEntity<Employee> createEmployee(
             @RequestPart("data") String data,
             @RequestPart(value = "file", required = false) MultipartFile file
