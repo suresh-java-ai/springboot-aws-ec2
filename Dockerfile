@@ -1,10 +1,10 @@
 #Use the official OpenJDK 21 image from Docker Hub
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 # Set working directory inside the container
 WORKDIR /app
 # Copy the complied Java application JAR file into the container
-COPY ./target/employee-service.jar /app
+COPY target/*.jar app.jar
 # Expose the port the spring boot application will run on
 EXPOSE 8080
 # Command to run the application
-CMD ["java", "-jar", "employee-service.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
