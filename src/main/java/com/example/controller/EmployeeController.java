@@ -17,10 +17,10 @@ import java.util.List;
 @RequestMapping("/api/employees")
 public class EmployeeController {
 
-//    @GetMapping("/display")
-//    public String displayData(){
-//        return "Upload Springboot app into AWS EC2 instance";
-//    }
+    @GetMapping("/display")
+    public String displayData(){
+        return "Upload Springboot app into AWS EC2 instance";
+    }
 
     private final EmployeeService employeeService;
 
