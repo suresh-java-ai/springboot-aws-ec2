@@ -22,10 +22,10 @@ public class EmployeeController {
         return "Upload Springboot app into AWS EC2 instance";
     }
 
-    @GetMapping("/welcome")
-    public String welcomeMsg(){
-        return "Welcome to Aws ECR and ECS";
-    }
+//    @GetMapping("/welcome")
+//    public String welcomeMsg(){
+//        return "Welcome to Aws ECR and ECS";
+//    }
 
     private final EmployeeService employeeService;
 
